@@ -1,0 +1,44 @@
+<%= form_for(@listing) do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form>
+    <div class="form-group">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, class: "form-control", placeholder: "What are you foraging?" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :description %><br>
+      <%= f.text_area :description, rows: "3", class: "form-control", placeholder: "How would you describe it in the kitchen?" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :location %><br>
+      <%= f.text_field :location, class: "form-control", placeholder: "Where'd you find it?" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :price %><br>
+      <%= f.text_field :price,  class: "form-control", placeholder: "21.50" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :image, "Add a picture of what you foraged:" %><br>
+      <%= f.file_field :image %>
+      <p class="help-block">Pick a good one.</p>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Done, list this item</button>
+      <%= link_to 'Nevermind, cancel this', listings_path, class: "btn btn-link" %></p>
+    </div>
+  </form>
+
+<% end %>

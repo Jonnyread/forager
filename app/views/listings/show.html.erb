@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div class="col-md-6">
+	<div class="thumbnail">
+		<%= image_tag @listing.image.url %>
+	</div>
+</div>
+
+<div class="col-md-6 listing-show">
+	<h3>
+	  <%= @listing.name %>
+	</h3>
+
+	<p>
+	  <%= number_to_currency(@listing.price) %>
+	</p>
+
+	<h5>
+	  <%= @listing.description %>
+	</h5>
+
+	<p>
+	  <strong>Location:</strong>
+	  <%= @listing.location %>
+	</p>
+
+
+
+	<%= link_to 'Edit', edit_listing_path(@listing) %> |
+	<%= link_to 'Back', listings_path %>
+
+</div>
+
+<br>
