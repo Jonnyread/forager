@@ -32,6 +32,12 @@ gem "paperclip", "~> 4.2"
 # Google Fonts
 gem 'google-webfonts-rails'
 
+# Dropbox Gem
+gem "paperclip-dropbox", ">= 1.1.7"
+
+# Adding Fiagro to protect account info
+gem "figaro"
+
 group :production do
 	gem "pg"
 	gem "rails_12factor"
