@@ -1,0 +1,9 @@
+<% if user_signed_in? %>       
+  
+  <div class="container-fluid top_section center">
+    <p> We love having more deliciousness on the site: <%= link_to 'Click here to add something you Foraged', new_listing_path %>. </p>
+  </div><!-- /.container-fluid -->
+
+<% else %>
+          
+<% end %>
