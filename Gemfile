@@ -38,6 +38,9 @@ gem "paperclip-dropbox", ">= 1.1.7"
 # Adding Fiagro to protect account info
 gem "figaro"
 
+# Adding Users
+gem 'devise'
+
 group :production do
 	gem "pg"
 	gem "rails_12factor"
