@@ -24,6 +24,7 @@
         <p>Location: <%= listing.location %></p>
         `-->
         <p><%= number_to_currency(listing.price) %></p>
+        <p>Forgaged By: <%= listing.user.name %></p>
         <br>
         <div class="row">
             <%= link_to 'Show', listing, class: "btn btn-link" %>
