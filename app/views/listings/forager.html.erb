@@ -1,5 +1,7 @@
 <%= render 'layouts/top_section' %> 
 
+<% unless @listings.blank? %>
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -20,7 +22,7 @@
         <td class="center"><%= number_to_currency(listing.price) %></td>
         <td class="center">
           <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
               Actions <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
@@ -34,3 +36,9 @@
       </tr>
     <% end %>
 </table>
+
+<% else %>
+
+<h2> You don't have any items yet! </h2>
+
+<% end %>

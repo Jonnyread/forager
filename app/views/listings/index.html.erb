@@ -1,13 +1,12 @@
-<!--<div class="row center">
-  <div>
-    <h1>Freshly Foraged for your Enjoyment!</h1>
-    <%= link_to 'Add something you Foraged', new_listing_path %>
-  </div>
+<div class="jumbotron hidden-xs">
+  <h2>Delicious and healthy plants <br>foraged for your enjoyment.</h2>
+  <p><small>Step out of the grocery store and into nature.</small></p>
+
+  <% unless user_signed_in? %>  
+    <%= link_to "Sign Up to Start your Adventure", new_user_registration_path, class: "btn btn-success" %>
+  <% end %>
+
 </div>
-
-<div class="clear-fix"></div>
-
-  <hr>-->
 
 <%= render 'layouts/top_section' %> 
 
