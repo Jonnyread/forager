@@ -16,11 +16,20 @@
 	<h5>
 	  <%= @listing.description %>
 	</h5>
-
+	
 	<p>
 	  <strong>Location:</strong>
 	  <%= @listing.location %>
 	</p>
+
+	<br>
+
+	<div class="">
+		<%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-info" %>
+	</div>
+
+	<br>
+	<br>
 
 
 	<% if (user_signed_in?) && (current_user == @listing.user) %>
